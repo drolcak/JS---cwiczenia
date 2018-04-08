@@ -9,13 +9,12 @@
 <!--description-->
 
 <h1> <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">Examples from</a></h1>
-<p> Write a JavaScript program to get the current date.  Go to the editor
-    Expected Output :
-    mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+<p> Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
 </p>
 
 <!------------------------------------------ solution-------------------------------------------------------------->
-<h1> Date format example: </h1>
+<h1> Triangle area: </h1>
+
 
 
 
@@ -23,29 +22,35 @@
 
 <script>
 /* data format*/
-var today = new Date();
+var a = 5; //first side
+var b = 6; //second
+var c = 7; //third
+var area;
 
-var dd = today.getDate();
-var mm = today.getMonth()+1;
-var yyyy = today.getFullYear();
+var p; //half of lenght of triangle
+p = (a + b + c)/2;
+area = Math.sqrt(p * (p - a) * (p - b) * (p - c) );
 
 
-if(dd<10)
+
+document.write(p);
+document.write('<br>' +area);
+
+
+// document.write('<br>'+dd+'-'+mm+'-'+yyyy);
+// document.getElementById("dd").innerHTML = today.getDate();
+// document.getElementById("mm").innerHTML = today.getMonth()+1;
+// document.getElementById("yyyy").innerHTML = today.getFullYear();
+/*if(dd<10)
 {
-    dd='0'+dd;
+ dd='0'+dd;
 }
 
 if(mm<10)
 {
     mm='0'+mm;
 }
-
-document.write(mm+'-'+dd+'-'+yyyy);
-document.write('<br>'+dd+'-'+mm+'-'+yyyy);
-// document.getElementById("dd").innerHTML = today.getDate();
-// document.getElementById("mm").innerHTML = today.getMonth()+1;
-// document.getElementById("yyyy").innerHTML = today.getFullYear();
-
+*/
 
 </script>
 
