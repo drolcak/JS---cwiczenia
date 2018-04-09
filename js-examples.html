@@ -27,45 +27,55 @@
 
 var zmienna = prompt("Type your sentence:"); //window
 var dlugosc = zmienna.length; //length (control)
-// var wyrazPoczatek = zmienna.charAt(0);
-// var wyrazKoniec = zmienna.charAt(zmienna.length-1);
+
 
 
 var text ="";
 var i = 0;
+var tab =[];
 
 while (i < dlugosc) {
     text += "<br>The number is " + i +" : " + zmienna.charAt(i);
     i++;
+    tab.push(zmienna.charAt(i-1));
+    tab.sort();
 }
+document.write('posortowane elementy:  ' +tab);
 
 
-//document.write(wyrazPoczatek);
-//document.write(wyrazKoniec);
+/*
+var tablicaposortowana = tab.sort();
+var count = 0;
+while (i=0 < tablicaposortowana.length) {
+
+   if (tablicaposortowana[i]=== tablicaposortowana[i+1])
+    {
+        document.write('cos sie stalo');
+          count++;
+    }
+    i++;
+}
+*/
+
+//if (tablicaproba[0] === tablicaproba[4])
+//{
+//document.write('takie same elementy');
+//}
+
+
+
+
 
 
 document.getElementById("while").innerHTML = text;
 document.getElementById("typed").innerHTML = zmienna;
 document.getElementById("dlugosc").innerHTML = dlugosc;
 
-//document.write(dlugosc);
-//document.write('<br>' +zmienna);
 
 
-// document.write('<br>'+dd+'-'+mm+'-'+yyyy);
-// document.getElementById("dd").innerHTML = today.getDate();
-// document.getElementById("mm").innerHTML = today.getMonth()+1;
-// document.getElementById("yyyy").innerHTML = today.getFullYear();
-/*if(dd<10)
-{
- dd='0'+dd;
-}
 
-if(mm<10)
-{
-    mm='0'+mm;
-}
-*/
+
+
 
 </script>
 
