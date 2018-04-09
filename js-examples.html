@@ -7,42 +7,49 @@
 <body>
 
 <!--description-->
-
 <h1> <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">Examples from</a></h1>
 <p> Count the number of Duplicates
-
     Write a function that will return the count of distinct case-insensitive alphabetic characters
     and numeric digits that occur more than once in the input string.
     The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 </p>
 
 <!------------------------------------------ solution-------------------------------------------------------------->
-<h1> Duplicate count: </h1>
-<h2> Typed sentence:  <span id="typed"></span></h2>
-<h2> Lenght:  <span id="dlugosc"></span></h2>
-<h2> </h2>
+<h2> Duplicate count: </h2>
 
-
-
-
+<h3> <br>Typed sentence:  <span id="typed"></span></h3>
+<h3> <br>Lenght:  <span id="dlugosc"></span></h3>
+<h3>JavaScript while</h3>
+<p id="while"></p>
 
 
 <script>
-/* data format*/
-var zmienna = prompt("Type your sentence:");
-var dlugosc = zmienna.length;
+
+var zmienna = prompt("Type your sentence:"); //window
+var dlugosc = zmienna.length; //length (control)
+// var wyrazPoczatek = zmienna.charAt(0);
+// var wyrazKoniec = zmienna.charAt(zmienna.length-1);
 
 
-// logs 8
+var text ="";
+var i = 0;
+
+while (i < dlugosc) {
+    text += "<br>The number is " + i +" : " + zmienna.charAt(i);
+    i++;
+}
 
 
+//document.write(wyrazPoczatek);
+//document.write(wyrazKoniec);
 
 
-document.write(zmienna.indexOf('a'));
+document.getElementById("while").innerHTML = text;
 document.getElementById("typed").innerHTML = zmienna;
 document.getElementById("dlugosc").innerHTML = dlugosc;
-document.write(dlugosc);
-document.write('<br>' +zmienna);
+
+//document.write(dlugosc);
+//document.write('<br>' +zmienna);
 
 
 // document.write('<br>'+dd+'-'+mm+'-'+yyyy);
