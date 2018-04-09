@@ -1,2 +1,2 @@
-# java-kurs-cwiczenia
-początki z Java, kurs
+# Java script - początki
+różne przykłady z nauki JS
