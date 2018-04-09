@@ -9,11 +9,18 @@
 <!--description-->
 
 <h1> <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">Examples from</a></h1>
-<p> Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+<p> Count the number of Duplicates
+
+    Write a function that will return the count of distinct case-insensitive alphabetic characters
+    and numeric digits that occur more than once in the input string.
+    The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 </p>
 
 <!------------------------------------------ solution-------------------------------------------------------------->
-<h1> Triangle area: </h1>
+<h1> Duplicate count: </h1>
+<h2> Typed sentence:  <span id="typed"></span></h2>
+<h2> Lenght:  <span id="dlugosc"></span></h2>
+<h2> </h2>
 
 
 
@@ -22,19 +29,20 @@
 
 <script>
 /* data format*/
-var a = 5; //first side
-var b = 6; //second
-var c = 7; //third
-var area;
+var zmienna = prompt("Type your sentence:");
+var dlugosc = zmienna.length;
 
-var p; //half of lenght of triangle
-p = (a + b + c)/2;
-area = Math.sqrt(p * (p - a) * (p - b) * (p - c) );
+
+// logs 8
 
 
 
-document.write(p);
-document.write('<br>' +area);
+
+document.write(zmienna.indexOf('a'));
+document.getElementById("typed").innerHTML = zmienna;
+document.getElementById("dlugosc").innerHTML = dlugosc;
+document.write(dlugosc);
+document.write('<br>' +zmienna);
 
 
 // document.write('<br>'+dd+'-'+mm+'-'+yyyy);
