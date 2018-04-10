@@ -46,16 +46,16 @@ i = 0; //zerowanie i - wcześniejsza wartość zależałaby od długości znakó
 let duplicateCount = 0;
 let tabDuplicate =[];
 
-for (i=0; i<dlugosc; i++ )
+for (i=0; i<dlugosc; i++) {
     if (tab[i] === tab[i + 1]) {
-    duplicateCount++;
+        duplicateCount++;
         tabDuplicate.push(duplicateCount);
         //document.write('znalazlem duplikat' + duplicateCount);
     }
     else {
 
     }
-
+}
 
 document.write('<br>'+'tablica Duplikat' + duplicateCount);
 //}
