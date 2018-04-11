@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loops js example </title>
+</head>
+<body>
+<!--description
+<h1> <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">Examples from</a></h1>
+<p> Za pomocą pętli (nie musi być pojedyncza) wypisz w konsoli tekst:
+    ╔═══════════════════════════╗
+    ║  To jest jakiś tekst  ║
+    ╚═══════════════════════════╝
+    W razie czego długość tekstu pobierzesz za pomocą konstrukcji:
+
+    "Ala ma kota".length //11
+</p>
+-->
+<!------------------------------------------ solution-------------------------------------------------------------->
+
+
+<script>
+
+
+    let str = '';
+
+    for (let i=0; i<3; i++) {
+        for (let j=0; j<28; j++) {
+            if (i == 0) {  // pierwszy wiersz
+                if (j==0){
+                    str = str+'╔';
+                }
+                if (j==27){
+                    str = str+'╗';
+                }
+                else
+                str = str + '═';
+            }
+            if (i == 1) {  // drugi wiersz
+                if (j==0 || j==27){
+                    str = str+'║';
+                }
+                if (j==1 || j==26){
+                    str = str+'';
+                }
+                else {
+                    str = str+'═'
+                }
+            }
+
+
+
+        }
+        str = str+'<br>';
+    }
+document.write(str);
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+for (let i=0; i<4; i++) {
+for (let j=0; j<6; j++) {
+if (i==0 || i>=3 || j==0 || j>=5) {
+str = str + '*';
+} else {
+str = str + '═';
+}
+}
+str = str + "<br>";
+}
+
+document.write(str);
