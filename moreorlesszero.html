@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>check-two-numbers</title>
+</head>
+<body>
+
+Podaj liczbe: <input title="to jest tytul" id="liczba" type="text" value="">
+<button onclick="Sprawdz()" type="submit" value="Submit">Potwierdź</button>
+
+
+<div id="co-wpisales"> </div>
+<div id="odpowiedz" style="margin-top: 100px; font-size:40px; color:darkred" >
+
+</div>
+
+
+<script>
+
+    let liczba_wpisana = "";
+    function Sprawdz() {
+
+        liczba_wpisana = document.getElementById("liczba").value;
+        if (liczba_wpisana>0) {
+            document.getElementById("odpowiedz").innerHTML = "Wpisałeś liczbę dodatnią";
+
+        }
+        else if (liczba_wpisana<0) {
+            document.getElementById("odpowiedz").innerHTML = "Wpisałeś liczbę ujemną";
+        }
+        else if (liczba_wpisana==0) {
+            document.getElementById("odpowiedz").innerHTML = "Wpisałeś zero";
+        }
+        else {
+            document.getElementById("odpowiedz").innerHTML = "Wpisz liczbę całkowitą i nie kombinuj";
+        }
+    }
+
+    function Wyswietl() {
+        document.getElementById("co-wpisales").innerHTML = "Wpisana liczba; "+ liczba_wpisana;
+    }
+</script>
+
+</body>
+</html>
+
+
